@@ -6,18 +6,16 @@ import re
 import sys
 from unicodedata import category
 
+import pandas as pd
 from emoji import UNICODE_EMOJI, demojize, emojize
 from ftfy import fix_text
 
-from . import constants
-from .specials import save_replace
-from .utils import remove_substrings
 from bs4 import BeautifulSoup
 from collections import Counter
 
 from nltk.corpus import wordnet
+from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from spellchecker import SpellChecker
 
 import spacy
 import string
@@ -302,16 +300,6 @@ def remove_emoticons(text):
     emoticon_pattern = re.compile(u'(' + u'|'.join(k for k in EMOTICONS) + u')')
     return emoticon_pattern.sub(r'', text)
 
-def correct_spellings(text):
-    spell = SpellChecker()
-    corrected_text = []
-    misspelled_words = spell.unknown(text.split())
-    for word in text.split():
-        if word in misspelled_words:
-            corrected_text.append(spell.correction(word))
-        else:
-            corrected_text.append(word)
-    return " ".join(corrected_text)
 def chat_words_conversion(text):
     chat_words_str = """
     AFAIK=As Far As I Know
@@ -401,3 +389,4 @@ def chat_words_conversion(text):
 
 # Reference : https://gist.github.com/slowkow/7a7f61f495e3dbb7e3d767f97bd7304b
 # https://github.com/NeelShah18/emot/blob/master/emot/emo_unicode.py
+
