@@ -1,5 +1,3 @@
-# youtube comment sentiment analysis
-
 # Youtube video Comments Sentiment Analysis
 Sentiment analysis was carried out on Putin's speech after invasion on Ukraine,  which gave mixed opinions:
 video: 'Vladimir Putin's Speech on Ukraine and US Foreign Policy and NATO - 24 February 2022, ENG Subtitles' 
