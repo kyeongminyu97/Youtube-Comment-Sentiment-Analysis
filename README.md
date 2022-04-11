@@ -10,4 +10,5 @@ https://www.youtube.com/watch?v=1qS6J-WbTD8&t=620s
 
 
 
-youtube_scrape.py to scrape comments from a video
+youtube_scrape.py : scrape comments from a video
+clean_text.py  : module containing functions to preprocess scraped text
