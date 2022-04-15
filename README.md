@@ -10,5 +10,6 @@ youtube_scrape.py : scrape comments from a video
 clean_text.py  : module containing functions to preprocess scraped text
 
 # Visualisation of results using Tableau
-
-<img width="853" alt="Screenshot 2022-04-15 at 00 53 13" src="https://user-images.githubusercontent.com/71874390/163521286-f1b865b5-daad-4f54-9513-dc4909c0d545.png">
+<p align="center">
+<img width="500" alt="Screenshot 2022-04-15 at 00 53 13" src="https://user-images.githubusercontent.com/71874390/163521286-f1b865b5-daad-4f54-9513-dc4909c0d545.png">
+</p>
